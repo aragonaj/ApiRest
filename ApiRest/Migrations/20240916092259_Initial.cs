@@ -18,9 +18,9 @@ namespace ApiRest.Migrations
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     name = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    town = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    state = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    date = table.Column<DateOnly>(type: "date", nullable: false)
+                    town = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    state = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    date = table.Column<DateOnly>(type: "date", nullable: true)
                 },
                 constraints: table =>
                 {
